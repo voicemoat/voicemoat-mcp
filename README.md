@@ -194,6 +194,16 @@ works once, so the same approval cannot post twice.
 The free VoiceMoat skills work in Claude, ChatGPT and Codex without one:
 https://github.com/prateeks367/voicemoat-skills
 
+Install all 26 into Claude Code, Codex, Cursor, OpenClaw, Hermes and other
+agents with [skills.sh](https://skills.sh/prateeks367/voicemoat-skills):
+
+```
+npx skills add prateeks367/voicemoat-skills
+```
+
+Add `--skill write-in-my-voice` for one skill, or `-g` to install them for
+every project.
+
 ## Also listed on
 
 - [Smithery](https://smithery.ai/servers/prateeks367/voicemoat)
