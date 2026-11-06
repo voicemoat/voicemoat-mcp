@@ -1,0 +1,11 @@
+{
+  "name": "voicemoat",
+  "version": "1.0.0",
+  "description": "The personal brand OS for LinkedIn and Twitter: draft in your voice, check drafts for Style and Stance, read your analytics, and publish or schedule with a preview first. Connects to VoiceMoat's hosted MCP server; needs a VoiceMoat Pro or Enterprise plan, or the $5 Pro trial.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "voicemoat": {
+      "httpUrl": "https://app.voicemoat.com/api/mcp"
+    }
+  }
+}

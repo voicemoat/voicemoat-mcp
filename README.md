@@ -105,6 +105,16 @@ Add the server to `~/.cursor/mcp.json`, or to `.cursor/mcp.json` in a project:
 
 Then sign in to VoiceMoat when Cursor asks.
 
+**Gemini CLI**
+
+Install it as an extension:
+
+```
+gemini extensions install https://github.com/prateeks367/voicemoat-mcp
+```
+
+Then run `/mcp auth voicemoat` and sign in to VoiceMoat.
+
 **Cline**
 
 1. In the Cline panel, select the wrench icon, then the **MCP** tab.
