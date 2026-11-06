@@ -4,9 +4,10 @@
 
 # VoiceMoat MCP server
 
-The personal brand OS for Twitter/X and LinkedIn: score, improve, schedule and
-publish posts, from Claude, ChatGPT, Grok, Claude Code or any assistant that
-supports remote MCP servers with OAuth.
+The personal brand OS for LinkedIn and Twitter: draft in your voice, check drafts
+for Style and Stance, read your analytics, and schedule or publish with a preview
+first, from Claude, ChatGPT, Grok, Cursor, Gemini CLI, Claude Code or any
+assistant that supports remote MCP servers with OAuth.
 
 **This repository holds documentation and connection settings only.** The
 server is a hosted service run by VoiceMoat at the address below. Its source
@@ -77,7 +78,7 @@ workspace.
 As a plugin:
 
 ```
-/plugin marketplace add prateeks367/voicemoat-mcp
+/plugin marketplace add voicemoat/voicemoat-mcp
 /plugin install voicemoat@voicemoat-mcp
 ```
 
@@ -110,10 +111,18 @@ Then sign in to VoiceMoat when Cursor asks.
 Install it as an extension:
 
 ```
-gemini extensions install https://github.com/prateeks367/voicemoat-mcp
+gemini extensions install https://github.com/voicemoat/voicemoat-mcp
 ```
 
 Then run `/mcp auth voicemoat` and sign in to VoiceMoat.
+
+**Grok Build**
+
+```
+grok mcp add --transport http voicemoat https://app.voicemoat.com/api/mcp
+```
+
+Grok Build opens the browser the first time; sign in to VoiceMoat.
 
 **Cline**
 
@@ -162,6 +171,12 @@ Neither posting tool acts the first time it is called.
 The code is tied to the exact text, the exact account and you. If anything
 changes between the two calls, it is refused and a fresh preview is returned. It
 works once, so the same approval cannot post twice.
+
+## Network and credentials
+
+- **One endpoint:** `https://app.voicemoat.com/api/mcp` over HTTPS (Streamable HTTP). Nothing runs on your machine: this repo has no scripts, hooks, binaries or dependencies, only settings files and docs.
+- **Credentials:** OAuth sign-in with your VoiceMoat account. No keys are stored in this repo or in the plugin; your assistant keeps the sign-in token. Your Twitter and LinkedIn logins stay with VoiceMoat and are never shared with the assistant.
+- **What it touches:** your own VoiceMoat account only: your voice profile, posts and analytics. Posting needs a preview and a second call with a one-time code.
 
 ## Limitations
 

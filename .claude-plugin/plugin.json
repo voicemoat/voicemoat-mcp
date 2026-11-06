@@ -2,14 +2,14 @@
   "name": "voicemoat",
   "displayName": "VoiceMoat",
   "version": "1.0.0",
-  "description": "The personal brand OS for Twitter/X and LinkedIn: score, improve, schedule and publish posts. Connects Claude Code to VoiceMoat's hosted MCP server with OAuth; needs a VoiceMoat account on the Pro or Enterprise plan.",
+  "description": "The personal brand OS for LinkedIn and Twitter: draft in your voice, check drafts for Style and Stance, read your analytics, and schedule or publish with a preview first. Connects Claude Code to VoiceMoat's hosted MCP server with OAuth; needs a VoiceMoat Pro or Enterprise plan, or the $5 Pro trial.",
   "author": {
     "name": "VoiceMoat",
     "email": "founder@voicemoat.com",
     "url": "https://voicemoat.com"
   },
   "homepage": "https://voicemoat.com/mcp",
-  "repository": "https://github.com/prateeks367/voicemoat-mcp",
+  "repository": "https://github.com/voicemoat/voicemoat-mcp",
   "license": "MIT",
   "keywords": [
     "voicemoat",

@@ -6,13 +6,13 @@
     "url": "https://voicemoat.com"
   },
   "metadata": {
-    "description": "VoiceMoat's hosted MCP server as a Claude Code plugin: score drafts against your voice profile, improve them, read your analytics, and publish or schedule Twitter/X and LinkedIn posts with a preview first."
+    "description": "VoiceMoat's hosted MCP server as a Claude Code plugin: draft in your voice, check drafts for Style and Stance, read your analytics, and publish or schedule with a preview first."
   },
   "plugins": [
     {
       "name": "voicemoat",
       "source": "./",
-      "description": "The personal brand OS for Twitter/X and LinkedIn: score, improve, schedule and publish posts. Connects to VoiceMoat's hosted MCP server; needs a VoiceMoat account on the Pro or Enterprise plan.",
+      "description": "The personal brand OS for LinkedIn and Twitter: draft in your voice, check drafts for Style and Stance, read your analytics, and schedule or publish with a preview first. Connects to VoiceMoat's hosted MCP server; needs a VoiceMoat Pro or Enterprise plan, or the $5 Pro trial.",
       "author": {
         "name": "VoiceMoat",
         "url": "https://voicemoat.com"

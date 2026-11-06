@@ -1,0 +1,19 @@
+{
+  "name": "voicemoat",
+  "displayName": "VoiceMoat",
+  "version": "1.0.0",
+  "description": "The personal brand OS for LinkedIn and Twitter: draft in your voice, check drafts for Style and Stance, read your analytics, and schedule or publish with a preview first. Connects to VoiceMoat's hosted MCP server; needs a VoiceMoat Pro or Enterprise plan, or the $5 Pro trial.",
+  "author": {
+    "name": "VoiceMoat",
+    "email": "founder@voicemoat.com",
+    "url": "https://voicemoat.com"
+  },
+  "homepage": "https://voicemoat.com/mcp",
+  "repository": "https://github.com/voicemoat/voicemoat-mcp",
+  "license": "MIT",
+  "keywords": [
+    "voicemoat",
+    "voicemoat linkedin",
+    "voicemoat twitter"
+  ]
+}
