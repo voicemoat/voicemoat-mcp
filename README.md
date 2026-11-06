@@ -116,6 +116,18 @@ gemini extensions install https://github.com/voicemoat/voicemoat-mcp
 
 Then run `/mcp auth voicemoat` and sign in to VoiceMoat.
 
+**Terminal (VoiceMoat CLI)**
+
+No assistant needed: the same tools from your terminal or scripts.
+
+```
+npx voicemoat login
+npx voicemoat ideas "remote work" --platform linkedin
+```
+
+Posting still previews first; `voicemoat confirm <id>` posts. Source and the
+agent skill: https://github.com/voicemoat/voicemoat-cli
+
 **Grok Build**
 
 ```
