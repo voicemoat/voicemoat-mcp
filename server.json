@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.voicemoat/voicemoat",
   "title": "VoiceMoat",
-  "description": "The personal brand OS for Twitter/X and LinkedIn: score, improve, schedule and publish posts.",
-  "version": "1.0.0",
+  "description": "The personal brand OS for LinkedIn and Twitter: check, improve, schedule and publish posts.",
+  "version": "1.0.1",
   "websiteUrl": "https://voicemoat.com/mcp",
   "icons": [
     {
