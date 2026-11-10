@@ -6,8 +6,8 @@
 
 The personal brand OS for LinkedIn and Twitter: draft in your voice, check drafts
 for Style and Stance, read your analytics, and schedule or publish with a preview
-first, from Claude, ChatGPT, Grok, Cursor, Gemini CLI, Claude Code or any
-assistant that supports remote MCP servers with OAuth.
+first, from more than 20 AI assistants, including Claude, ChatGPT, Cursor,
+Gemini, Grok, Manus and Perplexity Computer.
 
 **This repository holds documentation and connection settings only.** The
 server is a hosted service run by VoiceMoat at the address below. Its source
@@ -23,21 +23,23 @@ https://app.voicemoat.com/api/mcp
 | | |
 |---|---|
 | Transport | Streamable HTTP (remote, hosted) |
-| Authentication | OAuth. Your assistant opens the VoiceMoat sign-in page. No API keys |
-| Requires | A VoiceMoat account on the **Pro** or **Enterprise** plan |
+| Authentication | Sign-in (OAuth) for most assistants. A personal key for assistants that can only send a fixed header |
+| Requires | A VoiceMoat account on **Pro** or **Enterprise**, or the **$5 Pro trial** |
 | Website | https://voicemoat.com/mcp |
 | Full setup guide | https://docs.voicemoat.com/connect-voicemoat-to-an-assistant |
+| Guide for each assistant | https://docs.voicemoat.com/assistants |
 | Official MCP Registry | `com.voicemoat/voicemoat` |
 
 Connecting works on any plan. If your plan does not include it, each tool
-refuses with an explanation, and it starts working when you move to Pro or
-Enterprise, without reconnecting.
+refuses with an explanation, and it starts working when you move to Pro,
+Enterprise or the $5 Pro trial, without reconnecting.
 
 ## What it does
 
-- Score a draft against your voice profile, built from your own published posts
-  and kept separately for each platform: a Voice Match score from 0 to 100 and a
-  note on what is off.
+- Check a draft against your voice profile, built from your own published posts
+  and kept separately for each platform. Style shows how many of your measurable
+  habits it matches. Stance shows whether any line says something you would not.
+  The two are never blended into one number.
 - Improve a draft you already have.
 - Get post ideas and opening lines.
 - Read your voice profile, your impressions and reactions, and your top posts
@@ -143,11 +145,25 @@ Grok Build opens the browser the first time; sign in to VoiceMoat.
 3. Sign in to VoiceMoat in the browser window Cline opens. Once connected,
    VoiceMoat shows a green dot and its 15 tools.
 
+**Assistants that use a personal key**
+
+Manus, Cue, nanoclaw, DeepSeek Harness and Perplexity Computer can only send a
+fixed header, so they connect with a personal key.
+
+1. In VoiceMoat, open **Settings**, then **Assistants**, then **Personal keys**.
+2. Press **Create key** and pick the assistant. Tick **publish** if it should be
+   able to post straight away.
+3. Copy the key, which shows once, and send it as the header
+   `Authorization: Bearer` followed by the key.
+
+The key can be revoked at any time. VoiceMoat keeps only a fingerprint of it.
+There is a setup guide for each assistant at https://docs.voicemoat.com/assistants
+
 **Other clients**
 
-Any client that supports remote MCP servers over Streamable HTTP with OAuth can
-connect with the same address. Nothing is shared until you sign in, and the
-connection only ever reaches your own account.
+Any client that supports remote MCP servers over Streamable HTTP, with OAuth or
+a fixed header, can connect with the same address. Nothing is shared until you
+connect, and the connection only ever reaches your own account.
 
 ## Tools (15)
 
@@ -162,14 +178,14 @@ connection only ever reaches your own account.
 | `get_post` | One post in full, with its numbers | Yes | No |
 | `list_creators` | Creators you study in VoiceMoat | Yes | No |
 | `search_inspiration` | Public LinkedIn posts from tracked creators, by topic (not offered in ChatGPT) | Yes | No |
-| `score_voice_match` | Score text against your voice, 0 to 100 | No (uses credits) | No |
+| `score_voice_match` | Check text for Style and Stance against your voice profile | No (uses credits) | No |
 | `get_post_ideas` | Post ideas on a topic | No (uses credits) | No |
 | `improve_post` | Improve a draft | No (uses credits) | No |
 | `suggest_hooks` | Three opening lines for a topic | No (uses credits) | No |
 | `publish_post` | Publish now, after a preview and a confirmed second call | No | Yes |
 | `schedule_post` | Schedule for later, same preview and confirmation | No | Yes |
 
-Reading costs no credits. Scoring, ideas, hooks and improving spend credits from
+Reading costs no credits. Checks, ideas, hooks and improving spend credits from
 the same pool as the VoiceMoat dashboard, at the same prices.
 
 ## Posting always asks twice
@@ -184,19 +200,23 @@ The code is tied to the exact text, the exact account and you. If anything
 changes between the two calls, it is refused and a fresh preview is returned. It
 works once, so the same approval cannot post twice.
 
+The second call is not you approving the post. An assistant can make it on its
+own, so keep your assistant's tool approval on if you want to see every post
+before it goes out.
+
 ## Network and credentials
 
 - **One endpoint:** `https://app.voicemoat.com/api/mcp` over HTTPS (Streamable HTTP). Nothing runs on your machine: this repo has no scripts, hooks, binaries or dependencies, only settings files and docs.
-- **Credentials:** OAuth sign-in with your VoiceMoat account. No keys are stored in this repo or in the plugin; your assistant keeps the sign-in token. Your Twitter and LinkedIn logins stay with VoiceMoat and are never shared with the assistant.
+- **Credentials:** OAuth sign-in with your VoiceMoat account, or a personal key you create in Settings. No keys are stored in this repo or in the plugin; your assistant keeps the sign-in token or key. Your Twitter and LinkedIn logins stay with VoiceMoat and are never shared with the assistant.
 - **What it touches:** your own VoiceMoat account only: your voice profile, posts and analytics. Posting needs a preview and a second call with a one-time code.
 
 ## Limitations
 
 - Works only with your own account and the profiles you connected.
-- Your assistant writes new drafts; VoiceMoat scores, improves, schedules and
+- Your assistant creates new drafts; VoiceMoat checks, improves, schedules and
   publishes them.
-- A Voice Match score describes how close a draft is to your past posts. It does
-  not predict performance.
+- Style and Stance describe how close a draft is to your own posts. They do not
+  predict performance.
 - It cannot attach images, delete posts, reply to other people's posts or send
   messages.
 - LinkedIn numbers are as fresh as your last LinkedIn sync.
@@ -218,9 +238,9 @@ every project.
 
 ## Also listed on
 
-- [Smithery](https://smithery.ai/servers/prateeks367/voicemoat)
+- [Claude directory](https://claude.ai/directory/voicemoat)
 - [Glama](https://glama.ai/mcp/connectors/com.voicemoat/voicemoat)
-- [Claude Market](https://claudemarket.ai)
+- [MCP Market](https://mcpmarket.com/server/voicemoat)
 
 ## Links
 
