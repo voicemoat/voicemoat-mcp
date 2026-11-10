@@ -242,6 +242,8 @@ every project.
 - [Glama](https://glama.ai/mcp/connectors/com.voicemoat/voicemoat)
 - [MCP Market](https://mcpmarket.com/server/voicemoat)
 
+[![AllMCPs Verified](https://allmcps.com/api/badge/voicemoat)](https://allmcps.com/mcp/voicemoat?verify=0629bb89-a7bb-45e3-b534-07d176d7157c)
+
 ## Links
 
 - Privacy: https://voicemoat.com/privacy
